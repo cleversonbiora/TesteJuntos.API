@@ -10,4 +10,4 @@ Proximos passos:
 - Otimizar a Injeção de Dependencia nos Testes Unitários.
 - Implementar o metodo de Envio de Email.
 - Implementar a opção para autenticarção em dois fatores.
-
+- Adicionar mais comentários e criar o sumário para as funções principais.
