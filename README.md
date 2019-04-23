@@ -1,2 +1,3 @@
-# Template.DDD.NETCore
-Template Asp.NET Core with simplify DDD architeture.
+# Teste Junto
+
+Implementado em .NET Core, utilizando uma estrutura 
