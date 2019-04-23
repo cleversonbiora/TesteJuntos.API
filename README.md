@@ -7,4 +7,7 @@ Toda o tratamento de exceção e retorno da Api é feito através de middlewares
 
 Proximos passos:
 - Melhorar os Testes Unitarios para abranger mais casos.
+- Otimizar a Injeção de Dependencia nos Testes Unitários.
+- Implementar o metodo de Envio de Email.
+- Implementar a opção para autenticarção em dois fatores.
 
