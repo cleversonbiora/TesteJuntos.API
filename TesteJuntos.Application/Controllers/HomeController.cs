@@ -15,6 +15,7 @@ using TesteJuntos.CrossCutting.Attributes;
 
 namespace TesteJuntos.Application.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         [Route(""), HttpGet]

@@ -26,8 +26,22 @@ namespace TesteJuntos.Test
         [TestCategory("Login")]
         public async Task ValidLogin()
         {
-            dynamic resut = await _accountController.Login(new LoginAccountCommand() { User = "teste@teste.com", Password = "102030-aB" });
-            Assert.IsTrue(resut.success);
+            var result = await _accountController.Login(new LoginAccountCommand() { User = "teste@teste.com", Password = "102030-aB" });
+            Assert.IsTrue(Sucesso(result));
+        }
+        [TestMethod]
+        [TestCategory("Login")]
+        public async Task InvalidUsernameLogin()
+        {
+            var result = await _accountController.Login(new LoginAccountCommand() { User = "", Password = "102030-aB" });
+            Assert.IsTrue(ExistErrors(result));
+        }
+        [TestMethod]
+        [TestCategory("Login")]
+        public async Task InvalidPasswordLogin()
+        {
+            var result = await _accountController.Login(new LoginAccountCommand() { User = "teste@teste.com", Password = "102030" });
+            Assert.IsTrue(ExistErrors(result));
         }
     }
 }
