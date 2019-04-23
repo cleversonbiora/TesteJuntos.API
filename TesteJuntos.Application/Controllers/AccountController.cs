@@ -33,16 +33,10 @@ namespace TesteJuntos.Application.Controllers
             return Response(await _accountService.Login(login));
         }
         [AllowAnonymous]
-        [HttpPost("regiter")]
+        [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]RegisterAccountCommand register)
         {
             return Response(await _accountService.Register(register));
-        }
-        [Authorize]
-        [HttpGet("test")]
-        public IActionResult Test()
-        {
-            return Response(new { token = "Ok" });
         }
     }
 }
