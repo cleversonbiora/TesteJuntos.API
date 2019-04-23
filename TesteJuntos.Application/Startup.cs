@@ -102,7 +102,7 @@ namespace TesteJuntos.Application
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = $"TesteJuntos API {enviroment.EnvironmentName}", Version = "v1", Description = "Projeto TesteJuntos" });
+                c.SwaggerDoc("v1", new Info { Title = $"Teste Junto API {enviroment.EnvironmentName}", Version = "v1", Description = "Projeto TesteJuntos" });
                 c.AddSecurityDefinition("Bearer", new ApiKeyScheme { In = "header", Description = "Please enter JWT with Bearer into field", Name = "Authorization", Type = "apiKey" }); //Enable Bearer token o Swagger
                 c.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>> {
                 { "Bearer", Enumerable.Empty<string>() },
